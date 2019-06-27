@@ -28,7 +28,7 @@ public class CategoryController {
 
 
         model.addAttribute("categories", categoryDao.findAll());
-        model.addAttribute("title", "categories");
+        model.addAttribute("title", "Categories");
         return "category/index";
     }
 
