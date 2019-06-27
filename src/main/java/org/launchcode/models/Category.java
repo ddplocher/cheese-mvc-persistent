@@ -1,6 +1,6 @@
 package org.launchcode.models;
 
-import org.launchcode.controllers.CategoryController;
+
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -13,7 +13,7 @@ public class Category {
 
     @Id
     @GeneratedValue
-    private int id;
+    private int Id;
 
     @NotNull
     @Size(min = 3, max = 15)
@@ -30,7 +30,7 @@ public class Category {
 
 
     public int getId() {
-        return id;
+        return Id;
     }
 
     public String getName() {
@@ -38,10 +38,10 @@ public class Category {
     }
 
     public void setName(String name) {
-        this.name = name;
+       this.name = name;
     }
 
-
+    public List<Cheese> getCheeses() { return cheeses; }
 
 
 

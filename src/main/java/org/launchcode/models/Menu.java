@@ -19,7 +19,7 @@ public class Menu {
 
     @Id
     @GeneratedValue
-    private int Id;
+    private int id;
 
     @ManyToMany
     private List<Cheese> cheeses;
@@ -32,7 +32,7 @@ public class Menu {
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public String getName() {
