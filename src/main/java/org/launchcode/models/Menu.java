@@ -16,6 +16,9 @@ public class Menu {
     @Size(min=3, max=15)
     private String name;
 
+    //public Menu(String name) {
+        //this.name = name;
+    //}
 
     @Id
     @GeneratedValue
@@ -44,5 +47,8 @@ public class Menu {
     }
 
     public List<Cheese> getCheeses() {return cheeses;
+    }
+    public void removeItem(Cheese item) {
+        cheeses.remove (item);
     }
 }

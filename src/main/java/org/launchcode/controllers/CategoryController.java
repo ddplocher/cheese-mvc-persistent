@@ -48,7 +48,7 @@ public class CategoryController {
         if(errors.hasErrors()){
             model.addAttribute("title", "Add Category");
 
-            return "add";
+            return "/category/add";
         }
 
         categoryDao.save(category);

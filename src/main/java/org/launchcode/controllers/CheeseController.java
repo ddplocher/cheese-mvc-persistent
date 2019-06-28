@@ -34,8 +34,9 @@ public class CheeseController {
     // Request path: /cheese
     @RequestMapping(value = "")
     public String index(Model model) {
+        Iterable<Cheese> cheeses = cheeseDao.findAll();
 
-        model.addAttribute("cheeses", cheeseDao.findAll());
+        model.addAttribute("cheeses", cheeses);
         model.addAttribute("title", "My Cheeses");
 
         return "cheese/index";

@@ -25,11 +25,11 @@ public class Cheese {
     @Size(min=1, message = "Description must not be empty")
     private String description;
 
-@ManyToOne
+    @ManyToOne
     private Category category;
 
-@ManyToMany(mappedBy = "cheeses")
-private List <Menu> menus;
+    @ManyToMany(mappedBy = "cheeses")
+    private List <Menu> menus;
 
     public Cheese(String name, String description) {
         this.name = name;
@@ -57,8 +57,10 @@ private List <Menu> menus;
         this.description = description;
     }
 
-    public Category getCategory() {return category;}
+    public Category getCategory()
+    {return category;}
 
-    public void setCategory(Category category) {this.category = category;}
+    public void setCategory(Category category)
+    {this.category = category;}
 
 }
